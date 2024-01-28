@@ -11,7 +11,9 @@ switch (type) {
         fetch(url, {
             method: 'GET',
         }).then(response => {
-            console.log(response.json());
+            return response.json();
+        }).then(data => {
+            console.log(data);
         });
         break;
     case "insert":
@@ -26,7 +28,9 @@ switch (type) {
                 type,
             }),
         }).then(response => {
-            console.log(response.json());
+            return response.json();
+        }).then(data => {
+            console.log(data);
         });
         break;
     case "update":
@@ -40,7 +44,9 @@ switch (type) {
                 mine_id,
             }),
         }).then(response => {
-            console.log(response.json());
+            return response.json();
+        }).then(data => {
+            console.log(data);
         });
         break;
     case "delete":
@@ -53,7 +59,9 @@ switch (type) {
                 id,
             }),
         }).then(response => {
-            console.log(response.json());
+            return response.json();
+        }).then(data => {
+            console.log(data);
         });
         break;
     default:
