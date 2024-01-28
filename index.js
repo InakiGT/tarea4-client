@@ -4,6 +4,7 @@ const type = process.env.TYPE;
 const id = process.env.ID;
 const name = process.env.NAME;
 const mine_id = process.env.MINE_ID;
+const mine_type = process.env.MINE_TYPE;
 
 
 switch (type) {
@@ -25,7 +26,7 @@ switch (type) {
             body: JSON.stringify({
                 id,
                 name,
-                type,
+                mine_type,
             }),
         }).then(response => {
             return response.json();
